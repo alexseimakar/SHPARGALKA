@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Шпаргалка по HTML5</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        section {
+            margin-bottom: 30px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 2px 5px;
+            border-radius: 3px;
+            font-family: monospace;
+        }
+        pre {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Шпаргалка по HTML5 (смотри код на Ctrl+U)</h1>
+    </header>
+    <main>
+        
+        <section>
+            <h2>Основные элементы HTML</h2>
+            <h3>Таблицы</h3>
+            <pre>
+        <table border="1">
+            <caption>Пример таблицы</caption>
+            <thead>
+                <tr>
+                    <th>Заголовок 1</th>
+                    <th>Заголовок 2</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Ячейка 1</td>
+                    <td>Ячейка 2</td>
+                </tr>
+                <tr>
+                    <td>Ячейка 3</td>
+                    <td>Ячейка 4</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Итог 1</td>
+                    <td>Итог 2</td>
+                </tr>
+            </tfoot>
+        </table>
+            </pre>
+
+            <h3>Ссылки</h3>
+            <pre>
+        <a href="https://example.com">Текст ссылки</a>
+        <a href="https://example.com" target="_blank" rel="noopener noreferrer">Ссылка в новом окне</a>
+            </pre>
+
+            <h3>Списки</h3>
+            <pre>
+        <!-- Ненумерованный список -->
+        <ul>
+            <li>Элемент 1</li>
+            <li>Элемент 2</li>
+            <li>Элемент 3</li>
+        </ul>
+
+        <!-- Нумерованный список -->
+        <ol>
+            <li>Первый элемент</li>
+            <li>Второй элемент</li>
+            <li>Третий элемент</li>
+        </ol>
+
+        <!-- Список определений -->
+        <dl>
+            <dt>Термин 1</dt>
+            <dd>Определение 1</dd>
+            <dt>Термин 2</dt>
+            <dd>Определение 2</dd>
+        </dl>
+            </pre>
+
+            <h3>Блочные и строчные элементы</h3>
+            <pre>
+        <!-- Блочные элементы -->
+        <div>Блочный элемент</div>
+        <p>Абзац</p>
+        <h1>Заголовок 1</h1>
+        <h2>Заголовок 2</h2>
+        <h3>Заголовок 3</h3>
+        <h4>Заголовок 4</h4>
+        <h5>Заголовок 5</h5>
+        <h6>Заголовок 6</h6>
+
+        <!-- Строчные элементы -->
+        <span>Строчный элемент</span>
+        <strong>Важный текст</strong>
+        <em>Курсив</em>
+        <b>Жирный текст</b>
+        <i>Курсив</i>
+        <u>Подчеркнутый текст</u>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Семантические элементы</h2>
+            <ul>
+                <li><code>&lt;header&gt;</code> - Заголовочная часть документа или секции.</li>
+                <li><code>&lt;footer&gt;</code> - Нижняя часть документа или секции.</li>
+                <li><code>&lt;article&gt;</code> - Самостоятельная статья или пост.</li>
+                <li><code>&lt;section&gt;</code> - Секция документа.</li>
+                <li><code>&lt;nav&gt;</code> - Навигационная панель.</li>
+                <li><code>&lt;aside&gt;</code> - Боковая панель или вставка.</li>
+                <li><code>&lt;figure&gt;</code> - Контейнер для иллюстраций.</li>
+                <li><code>&lt;figcaption&gt;</code> - Подпись к иллюстрации.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Формы и новые типы инпутов</h2>
+            <pre>
+<form>
+    <label for="name">Имя:</label>
+    <input type="text" id="name" name="name">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email">
+
+    <label for="date">Дата:</label>
+    <input type="date" id="date" name="date">
+
+    <label for="color">Цвет:</label>
+    <input type="color" id="color" name="color">
+
+    <input type="submit" value="Отправить">
+</form>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Мультимедийные элементы</h2>
+            <pre>
+<video width="320" height="240" controls>
+    <source src="movie.mp4" type="video/mp4">
+    Ваш браузер не поддерживает элемент video.
+</video>
+
+<audio controls>
+    <source src="audio.mp3" type="audio/mpeg">
+    Ваш браузер не поддерживает элемент audio.
+</audio>
+
+<figure>
+  <img src="cat.jpg" 
+     alt="Изображение не отображается"
+     title="cat"
+     width="1920"
+     height="1200"
+     loading="lazy"
+     sizes="(max-width: 1920px) 1200px, 1920px"
+     crossorigin="anonymous"
+     referrerpolicy="no-referrer">
+  <figcaption>
+    Тут должно быть фото котика
+  </figcaption>
+﻿</figure>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Графические элементы</h2>
+            <pre>
+<canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+Ваш браузер не поддерживает элемент canvas.
+</canvas>
+
+<svg width="100" height="100">
+    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="3" fill="red" />
+</svg>
+            </pre>
+        </section>
+
+        <section>
+            <h2>Новые атрибуты и глобальные атрибуты</h2>
+            <ul>
+                <li><code>data-*</code> - Хранение пользовательских данных.</li>
+                <li><code>hidden</code> - Скрывает элемент.</li>
+                <li><code>contenteditable</code> - Позволяет редактировать содержимое элемента.</li>
+                <li><code>spellcheck</code> - Включает проверку орфографии.</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>API</h2>
+            <ul>
+                <li>Geolocation API - Определение местоположения пользователя.</li>
+                <li>Drag and Drop API - Перетаскивание элементов.</li>
+                <li>Canvas API - Рисование на холсте.</li>
+                <li>Web Storage API - Хранение данных на стороне клиента.</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>А это footer сайта</p>
+    </footer>
+</body>
+</html>
